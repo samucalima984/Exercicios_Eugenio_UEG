@@ -12,22 +12,14 @@ let precoFinal = precoInicial;
 
 if (arCond === "s") {
   precoFinal = precoFinal + arCondicionado;
-} else {
-  precoFinal = precoFinal + 0;
-}
+} 
 if (pintura === "s") {
   precoFinal = precoFinal + pinturaMetalica;
-} else {
-  precoFinal = precoFinal + 0;
-}
+} 
 if (vidro === "s") {
   precoFinal = precoFinal + vidroElétrico;
-} else {
-  precoFinal = precoFinal + 0;
-}
+} 
 if (direcao === "s") {
   precoFinal = precoFinal + direcaoHidraulica;
-} else {
-  precoFinal = precoFinal + 0;
-}
+} 
 console.log("Preço final = R$ " + precoFinal.toFixed(2));
