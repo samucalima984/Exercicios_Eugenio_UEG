@@ -1,3 +1,6 @@
+// sdfasdf asdf asdf asdf sdf sdfsdf asdf sadf asdfasdf asdf asdf 
+// asdf asdf sadf sadfasdf asdf sadf asd fasd s
+// asdas dfsdasf sdf sadf sdf
 const quantidadeReais = 500;
 const tipoMoeda = 4;
 let strMoeda = "";
