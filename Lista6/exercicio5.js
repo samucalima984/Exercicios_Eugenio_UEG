@@ -10,8 +10,8 @@ switch(tipoPulverizacao){
          valorTotal = valorTotal - (valorTotal * 0.05);
       } else if(valorTotal > 10750){
             valorTotal = valorTotal - (valorTotal * 0.10);
-      }
-      break;
+      } break;
+
    case 2:
       strPulverizacao = "Pulverização contra gafanhotos";
       valorTotal = 100 * areaAcres;
@@ -19,8 +19,8 @@ switch(tipoPulverizacao){
          valorTotal = valorTotal - (valorTotal * 0.05);
       } else if(valorTotal > 10750){
             valorTotal = valorTotal - (valorTotal * 0.10);
-      }
-      break;
+      } break;
+
    case 3:
       strPulverizacao = "Pulverização contra broca";
       valorTotal = 150 * areaAcres;
@@ -28,8 +28,8 @@ switch(tipoPulverizacao){
          valorTotal = valorTotal - (valorTotal * 0.05);
       } else if(valorTotal > 10750){
             valorTotal = valorTotal - (valorTotal * 0.10);
-      }
-      break;
+      } break;
+
    case 4:
       strPulverizacao = "Pulverização contra tudo";
       valorTotal = 250 * areaAcres;
@@ -37,8 +37,7 @@ switch(tipoPulverizacao){
          valorTotal = valorTotal - (valorTotal * 0.05);
       } else if(valorTotal > 10750){
             valorTotal = valorTotal - (valorTotal * 0.10);
-      }
-      break;
+      } break;
 
    default:
       strPulverizacao = "Tipo de Pulverização inválido";

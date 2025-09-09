@@ -1,6 +1,6 @@
 const raio = 1;
 const altura = 3;
-let tipoFigura = 1;
+let tipoFigura = 3;
 let strFiguraGeometrica = "";
 
 switch (tipoFigura) {
