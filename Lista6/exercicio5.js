@@ -51,7 +51,8 @@ switch (true) {
         
         break;
 }
+const saida = "Usuário: " + nomeUsuario;
+const saida2 = "Tipo de Pulverização: " + strTipoPulverizacao;
+const saida3 = "Valor a ser pago: R$ " + custo.toFixed(2);
+console.log(saida + "\n" + saida2 + "\n" + saida3);
 
-console.log("Usuário: " + nomeUsuario);
-console.log("Tipo de Pulverização: " + strTipoPulverizacao);
-console.log("Valor a ser pago: R$ " + custo.toFixed(2));
