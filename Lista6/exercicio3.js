@@ -1,6 +1,6 @@
 const n1 = 5;
 const n2 = 10;
-let operacaoAritmetica = "+";
+let operacaoAritmetica = "/";
 strOperacao = "";
 
 switch (operacaoAritmetica) {
@@ -8,14 +8,17 @@ switch (operacaoAritmetica) {
     strOperacao = "Adição";
     calculo = n1 + n2;    
         break;
+
     case "-":
     strOperacao = "Subtração";
     calculo = n1 - n2;    
         break;
+
     case "*":
     strOperacao = "Multiplicação";
     calculo = n1 * n2;    
         break;
+
     case "/":
     strOperacao = "Divisão";
     calculo = n1 / n2;    

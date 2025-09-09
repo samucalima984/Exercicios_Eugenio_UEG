@@ -1,7 +1,7 @@
 const areaAcres = 100;
-const tipoPulverizacao = 2;
+let tipoPulverizacao = 2;
 let strPulverizacao = "";
-let valorTotal = 0;
+
 switch(tipoPulverizacao){
    case 1:
       strPulverizacao = "Pulverização contra ervas daninhas";

@@ -1,5 +1,5 @@
 const quantidadeReais = 500;
-const tipoMoeda = 4;
+let tipoMoeda = 4;
 let strMoeda = "";
 
 switch (tipoMoeda) {

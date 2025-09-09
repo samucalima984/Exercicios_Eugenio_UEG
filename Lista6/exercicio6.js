@@ -1,8 +1,8 @@
-const n1 = 7.5;
-const n2 = 8.4;
-const n3 = 9.1;
+const n1 = 8;
+const n2 = 6;
+const n3 = 10;
 const nNotas = 3;
-const tipoMedia = 3;
+const tipoMedia = 1;
 let strMedia = "";
 
 switch (tipoMedia) {

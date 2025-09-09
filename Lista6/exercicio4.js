@@ -1,5 +1,5 @@
 const quantidadeCombustível = 250;
-const tipoCombustível = 3;
+let tipoCombustível = 3;
 let strCombustivel = "";
 
 switch (tipoCombustível) {
