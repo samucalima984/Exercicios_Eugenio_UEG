@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço Final de Um Carro</title>
+</head>
+<body>
+    <h1>Programa para Cálculo do Custo Final da Compra de Um Carro</h1>
+    <h2>Informe o valor do Carro e se desejar os adicionais Digte S(Sim) ou N(Não):</h2>
+    
+
+    <form>
+    <h2>
+    <p>Digite o Valor do Carro: <input type="text" id="idInValorCarro"></p>    
+    <p>Deseja adicionar Ar Condicionado: <input type="text" id="idInAr"></p>
+    <p>Deseja adicionar Pintura Metálica: <input type="text" id="idInPintura"></p>
+    <p>Deseja adicionar Vidro Elétrico: <input type="text" id="idInVidro"></p>
+    <p>Deseja adicionar Direção Hidráulica: <input type="text" id="idInDirecao"></p>
+    
+    <p><input type="button" id="btnValorCarro" value="Calcular Valor Total" onclick="eventoBtnCalcularValorCarro()"></p>
+    <p>Resultado:</p>
+    <p id= "idOnResultado"></p>
+    </h2>
+    </form>
+    
+    <script src="js/arquivo.js"></script>
+
+</body>
+</html>

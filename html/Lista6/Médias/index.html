@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Médias</title>
+</head>
+<body>
+    <h1>Programa para Cálculo de Médias</h1>
+    <h2>Escolha uma opção de média:</h2>
+    <h3>1 - Aritmética</h3>
+    <h3>2 - Ponderada</h3>
+    <h3>3 - Harmônica</h3>
+    <h3>4 - Geométrica</h3>
+    <h3>5 - Quadrática</h3>
+    
+    <form>
+    <h2>
+    <p>Digite a sua escolha de Média: <input type="text" id="idInOpcao"></p>    
+    <p>Digite a Primeira Nota: <input type="text" id="idInNota1"></p>
+    <p>Digite a Segunda Nota: <input type="text" id="idInNota2"></p>
+    <p>Digite a Terceira Nota: <input type="text" id="idInNota3"></p>
+    
+    <p><input type="button" id="btnCalculoMedia" value="Calcular Média" onclick="eventoBtnCalcularMedia()"></p>
+    <p>Resultado:</p>
+    <p id= "idOnResultado"></p>
+    </h2>
+    </form>
+    
+    <script src="js/arquivo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço de um Produto</title>
+</head>
+<body>
+    <h1>Programa para cálculo do preço de um Produto</h1>
+    <h2>Escolha uma forma de Pagamento:</h2>
+    <h3>1 - À vista, dinheiro ou cheque, 10% de desconto</h3>
+    <h3>2 - À vista, cartão de credito, 5% de desconto</h3>
+    <h3>3 - Em 2 vezes, preço normal da etiqueta sem juros</h3>
+    <h3>4 - Em 3 vezes, preço normal da etiqueta + 10% de juros</h3>
+    
+    <form>
+    <h2>
+    <p>Digite o número da sua escolha: <input type="text" id="idInOpcao"></p>    
+    <p>Digite o Valor do Produto: R$ <input type="text" id="idInValor"></p>
+    
+    <p><input type="button" id="btnCalculoProduto" value="Calcular Valor Final" onclick="eventoBtnCalcularPrecoProduto()"></p>
+    <p>Resultado:</p>
+    <p id= "idOnResultado"></p>
+    </h2>
+    </form>
+    
+    <script src="js/arquivo.js"></script>
+
+</body>
+</html>
