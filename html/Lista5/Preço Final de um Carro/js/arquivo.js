@@ -15,16 +15,16 @@ const direcaoHidraulica = 2000;
 
 let precoFinal = valor;
 
-if (arCond === "s") {
+if (arCond == "s") {
   precoFinal = precoFinal + arCondicionado;
 } 
-if (pintura === "s") {
+if (pintura == "s") {
   precoFinal = precoFinal + pinturaMetalica;
 } 
-if (vidro === "s") {
+if (vidro == "s") {
   precoFinal = precoFinal + vidroElétrico;
 } 
-if (direcao === "s") {
+if (direcao == "s") {
   precoFinal = precoFinal + direcaoHidraulica;
 } 
 return precoFinal.toFixed(2);
@@ -32,12 +32,12 @@ return precoFinal.toFixed(2);
 
 function eventoBtnCalcularValorCarro() {
   
-    const vA = Number(valorArCondicionado.value);
-    const vP = Number(valorPinturaMetalica.value);
-    const vV = Number(valorVidroEletrico.value);
-    const vH = Number(valorDirecaoHidraulica.value);
+    const vA = valorArCondicionado.value;
+    const vP = valorPinturaMetalica.value;
+    const vV = valorVidroEletrico.value;
+    const vH = valorDirecaoHidraulica.value;
     const vCarro = Number(valorCarro.value);
-    const calculoValorFinal = calcularValorCarro(vA, vP, vV, vH, vCarro);
+    const calculoValorFinal = calculoValorCarro(vA, vP, vV, vH, vCarro);
     const saida = " Preço Final = R$ " + calculoValorFinal;
 
     resultado.innerText = saida;
