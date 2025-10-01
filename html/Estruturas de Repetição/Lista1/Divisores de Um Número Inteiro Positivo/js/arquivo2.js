@@ -8,10 +8,12 @@ function gerarDivisores(numero){
     return "Digite um número inteiro positivo!";
   }
     let saida = "";
-    for (let i = 1; i <= n; i++) {
-        if (n % i === 0) {
-            saida += numero + " / " + i + " = " + i * numero + "\n";
-        }
+    let valor = 1;
+    while(valor <= n){
+        if (n % valor === 0) {
+            saida += numero + " / " + valor + " = " + valor * numero + "\n";
+            
+        } valor++;
     }
     return saida;
 }
