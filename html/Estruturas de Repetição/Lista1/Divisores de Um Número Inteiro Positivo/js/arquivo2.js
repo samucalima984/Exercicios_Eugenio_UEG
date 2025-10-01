@@ -11,7 +11,8 @@ function gerarDivisores(numero){
     let valor = 1;
     while(valor <= n){
         if (n % valor == 0) {
-            saida += numero + " / " + valor + " = " + valor * numero + "\n";
+            divisao = numero / valor;
+            saida += numero + " / " + valor + " = " + divisao + "\n";
             
         } valor++;
     }

@@ -12,7 +12,8 @@ function gerarDivisores(numero){
 
     do{
         if (n % valor == 0) {
-            saida += numero + " / " + valor + " = " + valor * numero + "\n";
+            divisao = numero / valor;
+            saida += numero + " / " + valor + " = " + divisao + "\n";
             
         } valor++;
     }
