@@ -3,21 +3,16 @@ const resultado = document.getElementById("idOnResultado");
 
 function gerarDivisores(numero){
 
-    const n = parseInt(numero)
-     if (n <= 0 || !Number.isInteger(n)) {
-    return "Digite um número inteiro positivo!";
-  }
     let saida = "";
     let valor = 1;
 
     do{
-        if (n % valor == 0) {
+        if (numero % valor == 0) {
             divisao = numero / valor;
-            saida += numero + " / " + valor + " = " + divisao + "\n";
-            
+            saida += + valor + "\n"; 
         } valor++;
     }
-    while(valor <= n)
+    while(valor <= numero)
     return saida;
 }
 

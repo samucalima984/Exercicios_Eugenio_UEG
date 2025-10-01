@@ -3,15 +3,12 @@ const resultado = document.getElementById("idOnResultado");
 
 function gerarDivisores(numero){
 
-    const n = parseInt(numero)
-     if (n <= 0 || !Number.isInteger(n)) {
-    return "Digite um número inteiro positivo!";
-  }
+  
     let saida = "";
-    for (let valor = 1; valor <= n; valor++) {
-        if (n % valor == 0) {
+    for (let valor = 1; valor <= numero; valor++) {
+        if (numero % valor == 0) {
             divisao = numero / valor
-            saida += numero + " / " + valor + " = " + divisao + "\n";
+            saida += valor + "\n";
         }
     }
     return saida;

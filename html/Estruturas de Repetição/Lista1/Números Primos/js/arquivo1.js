@@ -13,9 +13,6 @@ function ehPrimo(n) {
 }
 
 function verificarNumeroPrimo(n) {
-    if (!Number.isInteger(n) || n <= 0) {
-        return "Digite um número inteiro positivo";
-    }
 
     if (ehPrimo(n)) {
         return n + " é um número Primo";
