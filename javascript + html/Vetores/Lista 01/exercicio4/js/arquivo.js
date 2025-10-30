@@ -30,8 +30,9 @@ function inverterNumero(numero) {
   return numeroInvertido;
 }
 
-function acaoMostrarNumeroInvertido() {
-  let saida = "Vetor - Números Invertidos\n";
+function acaoBotaoMostrarNumeroInvertido() {
+
+  let saida = "Número Original - Número Invertido\n";
 
   for (let vetor = 0; vetor < arrayNumeros.length; vetor++) {
     const numeroOriginal = arrayNumeros[vetor];

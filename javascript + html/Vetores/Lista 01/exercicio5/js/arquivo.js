@@ -7,7 +7,7 @@ function gerarConjunto() {
   arrayNumeros = [];
 
   for (let contador = 0; contador < 10; contador++) {
-    const numero = Math.floor(Math.random() * 10) + 1;
+    const numero = Math.floor(Math.random() * 100) + 1;
     arrayNumeros.push(numero);
   }
 
@@ -24,7 +24,8 @@ function calcularFatorial(n) {
   return resultado;
 }
 
-function acaoImprimirFatoriais() {
+function acaoBotaoImprimirFatoriais() {
+
   if (arrayNumeros.length == 0) {
     saidaC.innerText = "Gere o conjunto antes de calcular os fatoriais.";
     return;

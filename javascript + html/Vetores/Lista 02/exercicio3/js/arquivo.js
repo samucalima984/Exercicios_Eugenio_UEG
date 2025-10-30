@@ -6,10 +6,11 @@ let conjuntoA = [];
 let conjuntoB = [];
 
 function gerarNumeroAleatorio() {
-  return Math.floor(Math.random() * 21);
+  return Math.floor(Math.random() * 20) + 1;
 }
 
 function gerarConjuntoA() {
+
   conjuntoA = [];
   for (let vetor = 0; vetor < 5; vetor++) {
     conjuntoA[vetor] = gerarNumeroAleatorio();
@@ -19,6 +20,7 @@ function gerarConjuntoA() {
 }
 
 function gerarConjuntoB() {
+
   conjuntoB = [];
   for (let vetor = 0; vetor < 5; vetor++) {
     conjuntoB[vetor] = gerarNumeroAleatorio();
@@ -27,21 +29,39 @@ function gerarConjuntoB() {
   resultadoC.innerText = "";
 }
 
-function calcularProdutoEscalar() {
+function calcularProdutoEscalar(conjuntoA, conjuntoB) {
 
+  let multiplicacoes = [];
+  let resultadoMultiplicacoes = [];
+  let produtoEscalar = 0;
+
+  for (let vetor = 0; vetor < 5; vetor++) {
+    let produto = conjuntoA[vetor] * conjuntoB[vetor];
+    multiplicacoes.push(conjuntoA[vetor] + " * " + conjuntoB[vetor]);
+    resultadoMultiplicacoes.push(produto);
+    produtoEscalar += produto;
+  }
+
+  return [multiplicacoes, resultadoMultiplicacoes, produtoEscalar];
+}
+
+function acaoBotaoExibirProdutoEscalar() {
+  
   if (conjuntoA.length === 0 || conjuntoB.length === 0) {
     resultadoC.innerText = "Gere os conjuntos A e B antes de calcular o produto escalar.";
     return;
   }
 
-  let produtoEscalar = 0;
-  let detalhes = [];
+  const calculo = calcularProdutoEscalar(conjuntoA, conjuntoB);
+  const multiplicacoes = calculo[0];
+  const resultadoMultiplicacoes = calculo[1];
+  const resultadoFinal = calculo[2];
 
-  for (let vetor = 0; vetor < 5; vetor++) {
-    let produto = conjuntoA[vetor] * conjuntoB[vetor];
-    produtoEscalar += produto;
-    detalhes.push(conjuntoA[vetor] + " * " + conjuntoB[vetor] + " = " + produto);
-  }
-
-  resultadoC.innerText = detalhes.join(" | ") + "\nProduto Escalar = " + produtoEscalar;
+  resultadoC.innerText =
+    "Produto Escalar = " +
+    multiplicacoes.join(" + ") +
+    " = " +
+    resultadoMultiplicacoes.join(" + ") +
+    " = " +
+    resultadoFinal;
 }

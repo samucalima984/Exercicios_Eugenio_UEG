@@ -26,7 +26,7 @@ function verificarNumeroPrimo(n) {
   return true;
 }
 
-function acaoImprimirNumerosPrimos() {
+function acaoBotaoImprimirNumerosPrimos() {
   
   const numerosPrimos = [];
 

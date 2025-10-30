@@ -17,7 +17,7 @@ function gerarConjunto() {
   saidaC.innerText = " ";
 }
 
-function verificarNumero() {
+function buscarNumero() {
   
   const valor = Number(numeroC.value);
   let existeNoConjunto = false; 
@@ -33,4 +33,10 @@ function verificarNumero() {
   } else {
     saidaC.innerText = "O número " + valor + " NÃO EXISTE no conjunto.";
   }
+}
+
+ function acaoBotaoVerificarNumero() {
+  
+  buscarNumero();
+
 }
