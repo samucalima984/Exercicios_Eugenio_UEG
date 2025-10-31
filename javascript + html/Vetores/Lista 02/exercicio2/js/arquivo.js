@@ -1,65 +1,53 @@
-const resultadoA = document.getElementById("idConjuntoA");
-const resultadoB = document.getElementById("idConjuntoB");
-const resultadoC = document.getElementById("idConjuntoC");
+    const resultadoA = document.getElementById("idConjuntoA");
+    const resultadoB = document.getElementById("idConjuntoB");
+    const resultadoC = document.getElementById("idConjuntoC");
 
-let conjuntoA = [];
-let conjuntoB = [];
-let conjuntoC = [];
+    let conjuntoA = [];
+    let conjuntoB = [];
+    let conjuntoC = [];
 
-function gerarNumeroAleatorio() {
-  return Math.floor(Math.random() * 100) + 1;
-}
+    function mostrarOrdenado(vetor, numero) {
+      let posicao = 0;
 
-function gerarConjuntoA() {
+      while (posicao < vetor.length && numero > vetor[posicao]) {
+        posicao++;
+      }
 
-  conjuntoA = [];
+      for (let deslocamento = vetor.length; deslocamento > posicao; deslocamento--) {
+        vetor[deslocamento] = vetor[deslocamento - 1];
+      }
 
-  for (let vetor = 0; vetor < 10; vetor++) {
-    conjuntoA[vetor] = gerarNumeroAleatorio();
-  }
-  resultadoA.innerText = "Conjunto A: " + conjuntoA.join(" | ");
-  resultadoC.innerText = "";
-}
+      vetor[posicao] = numero;
+    }
 
-function gerarConjuntoB() {
+    function gerarConjunto() {
+      let conjunto = [];
 
-  conjuntoB = [];
+      for (let vetor = 0; vetor < 10; vetor++) {
+        let numero = Math.floor(Math.random() * 20) + 1;
+        mostrarOrdenado(conjunto, numero);
+      }
 
-  for (let vetor = 0; vetor < 10; vetor++) {
-    conjuntoB[vetor] = gerarNumeroAleatorio();
-  }
-  resultadoB.innerText = "Conjunto B: " + conjuntoB.join(" | ");
-  resultadoC.innerText = "";
-}
+      return conjunto;
+    }
 
-function inserirOrdenado(vetor, numero) {
-    
-  let posicao = 0;
+    function gerarConjuntoIntercalado(array1, array2) {
+      let conjuntoIntercalado = [];
 
-  while (posicao < vetor.length && numero > vetor[posicao]) {
-    posicao++;
-  }
+      for (let vetor = 0; vetor < 10; vetor++) {
+        mostrarOrdenado(conjuntoIntercalado, array1[vetor]);
+        mostrarOrdenado(conjuntoIntercalado, array2[vetor]);
+      }
 
-  for (let deslocamento = vetor.length; deslocamento > posicao; deslocamento--) {
-    vetor[deslocamento] = vetor[deslocamento - 1];
-  }
+      return conjuntoIntercalado;
+    }
 
-  vetor[posicao] = numero;
-}
+    function acaoBotaoExecutar() {
+      conjuntoA = gerarConjunto();
+      conjuntoB = gerarConjunto();
+      conjuntoC = gerarConjuntoIntercalado(conjuntoA, conjuntoB);
 
-function gerarConjuntoIntercalado() {
-
-  if (conjuntoA.length === 0 || conjuntoB.length === 0) {
-    resultadoC.innerText = "Gere os conjuntos A e B antes de intercalar.";
-    return;
-  }
-
-  conjuntoC = [];
-
-  for (let vetor = 0; vetor < 10; vetor++) {
-    inserirOrdenado(conjuntoC, conjuntoA[vetor]);
-    inserirOrdenado(conjuntoC, conjuntoB[vetor]);
-  }
-
-  resultadoC.innerText = "Conjunto Intercalado (Ordenado): " + conjuntoC.join(" | ");
-}
+      resultadoA.innerText = "Conjunto A ordenado: " + conjuntoA.join(" | ");
+      resultadoB.innerText = "Conjunto B ordenado: " + conjuntoB.join(" | ");
+      resultadoC.innerText = "Conjunto Intercalado: " + conjuntoC.join(" | ");
+    }

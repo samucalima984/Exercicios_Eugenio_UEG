@@ -1,53 +1,38 @@
-const resultadoA = document.getElementById("idConjuntoA");
-const resultadoB = document.getElementById("idConjuntoB");
-const resultadoC = document.getElementById("idConjuntoC");
+    const resultadoA = document.getElementById("idConjuntoA");
+    const resultadoB = document.getElementById("idConjuntoB");
+    const resultadoC = document.getElementById("idConjuntoC");
 
-let conjuntoA = [];
-let conjuntoB = [];
-let conjuntoC = [];
+    let conjuntoA = [];
+    let conjuntoB = [];
+    let conjuntoC = [];
 
-function gerarNumeroAleatorio() {
-  return Math.floor(Math.random() * 100) + 1;
-}
+    function gerarConjunto() {
 
-function gerarConjuntoA() {
+      let conjunto = [];
+      for (let vetor = 0; vetor < 10; vetor++) {
+        conjunto.push(Math.floor(Math.random() * 20) + 1);
+      }
+      return conjunto;
+    }
 
-  conjuntoA = [];
+    function gerarConjuntoIntercalado(array1, array2) {
 
-  for (let vetor = 0; vetor < 10; vetor++) {
-    conjuntoA[vetor] = gerarNumeroAleatorio();
-  }
-  resultadoA.innerText = "Conjunto A: " + conjuntoA.join(" | ");
-  resultadoC.innerText = "";
-}
+      let conjuntoIntercalado = [];
+      for (let vetor = 0; vetor < 10; vetor++) {
+        conjuntoIntercalado.push(array1[vetor]);
+        conjuntoIntercalado.push(array2[vetor]);
+      }
+      return conjuntoIntercalado;
+    }
 
-function gerarConjuntoB() {
+    function acaoBotaoExecutar() {
 
-  conjuntoB = [];
+      conjuntoA = gerarConjunto();
+      conjuntoB = gerarConjunto();
 
-  for (let vetor = 0; vetor < 10; vetor++) {
-    conjuntoB[vetor] = gerarNumeroAleatorio();
-  }
-  resultadoB.innerText = "Conjunto B: " + conjuntoB.join(" | ");
-  resultadoC.innerText = "";
-}
+      conjuntoC = gerarConjuntoIntercalado(conjuntoA, conjuntoB);
 
-function gerarConjuntoIntercalado() {
-
-  if (conjuntoA.length === 0 || conjuntoB.length === 0) {
-    resultadoC.innerText = "Gere os conjuntos A e B antes de intercalar.";
-    return;
-  }
-    
-  conjuntoC = [];
-  let posicao = 0;
-
-  for (let vetor = 0; vetor < 10; vetor++) {
-    conjuntoC[posicao] = conjuntoA[vetor];
-    posicao++;
-    conjuntoC[posicao] = conjuntoB[vetor];
-    posicao++;
-  }
-
-  resultadoC.innerText = "Conjunto Intercalado: " + conjuntoC.join(" | ");
-}
+      resultadoA.innerText = "Conjunto A: " + conjuntoA.join(" | ");
+      resultadoB.innerText = "Conjunto B: " + conjuntoB.join(" | ");
+      resultadoC.innerText = "Conjunto Intercalado: " + conjuntoC.join(" | ");
+    }
