@@ -5,26 +5,39 @@ const resultadoC = document.getElementById("idConjuntoC");
 let conjuntoA = [];
 let conjuntoB = [];
 
-function gerarNumeroAleatorio() {
-  return Math.floor(Math.random() * 20) + 1;
+function gerarConjunto() {
+  let conjunto = [];
+  for (let vetor = 0; vetor < 3; vetor++) {
+    conjunto.push(Math.floor(Math.random() * 3) + 1);
+  }
+  return conjunto;
 }
 
-function gerarConjuntoA() {
-  conjuntoA = [];
-  for (let i = 0; i < 5; i++) {
-    conjuntoA[i] = gerarNumeroAleatorio();
+function verificarConjuntosIdenticos(conjuntoA, conjuntoB) {
+
+conjuntoA.sort();
+conjuntoB.sort();
+
+  for (let vetor = 0; vetor < conjuntoA.length; vetor++) {
+    if (conjuntoA[vetor] !== conjuntoB[vetor]) {
+      return false;
+    }
   }
+  return true;
+}
+
+function acaoBotaoExecutar() {
+  conjuntoA = gerarConjunto();
+  conjuntoB = gerarConjunto();
+
   resultadoA.innerText = "Conjunto A: " + conjuntoA.join(" | ");
-  resultadoC.innerText = "";
-}
-
-function gerarConjuntoB() {
-  conjuntoB = [];
-  for (let i = 0; i < 5; i++) {
-    conjuntoB[i] = gerarNumeroAleatorio();
-  }
   resultadoB.innerText = "Conjunto B: " + conjuntoB.join(" | ");
-  resultadoC.innerText = "";
+
+  let identicos = verificarConjuntosIdenticos(conjuntoA, conjuntoB);
+
+  if (identicos) {
+    resultadoC.innerText = "Os conjuntos A e B SÃO idênticos";
+  } else {
+    resultadoC.innerText = "Os conjuntos A e B NÃO SÃO idênticos";
+  }
 }
-
-
