@@ -7,14 +7,15 @@
     let conjuntoC = [];
 
     function mostrarOrdenado(vetor, numero) {
+      
       let posicao = 0;
 
       while (posicao < vetor.length && numero > vetor[posicao]) {
         posicao++;
       }
 
-      for (let deslocamento = vetor.length; deslocamento > posicao; deslocamento--) {
-        vetor[deslocamento] = vetor[deslocamento - 1];
+      for (let mudarPosicao = vetor.length; mudarPosicao > posicao; mudarPosicao--) {
+        vetor[mudarPosicao] = vetor[mudarPosicao - 1];
       }
 
       vetor[posicao] = numero;

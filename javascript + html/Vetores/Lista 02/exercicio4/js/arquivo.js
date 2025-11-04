@@ -7,8 +7,8 @@ let conjuntoB = [];
 
 function gerarConjunto() {
   let conjunto = [];
-  for (let vetor = 0; vetor < 3; vetor++) {
-    conjunto.push(Math.floor(Math.random() * 3) + 1);
+  for (let vetor = 0; vetor < 5; vetor++) {
+    conjunto.push(Math.floor(Math.random() * 20) + 1);
   }
   return conjunto;
 }
