@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Teoria dos Conjuntos</title>
+    <script src="js/arquivo2.js"></script> <!-- defer = carrega após o HTML -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .bloco {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #aaa;
+            border-radius: 8px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        button {
+            margin: 3px;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Sistema Teoria dos Conjuntos</h2>
+
+    <div class="bloco">
+        <h3>Conjunto A</h3>
+        <input type="number" id="valorA" placeholder="Valor">
+        <button onclick="incluirA()">Incluir</button>
+        <p id="exibirA">A = {}</p>
+    </div>
+
+    <div class="bloco">
+        <h3>Conjunto B</h3>
+        <input type="number" id="valorB" placeholder="Valor">
+        <button onclick="incluirB()">Incluir</button>
+        <p id="exibirB">B = {}</p>
+    </div>
+
+    <div>
+        <h3>Operações</h3>
+        <button onclick="mostrar('uniao')">A ∪ B</button>
+        <button onclick="mostrar('intersecao')">A ∩ B</button>
+        <button onclick="mostrar('diferencaAB')">A - B</button>
+        <button onclick="mostrar('diferencaBA')">B - A</button>
+        <button onclick="mostrar('ordenado')">Ordenar A∪B</button>
+        <p id="resultado"></p>
+    </div>
+</body>
+</html>
