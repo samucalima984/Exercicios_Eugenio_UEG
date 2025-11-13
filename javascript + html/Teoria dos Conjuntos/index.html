@@ -1,57 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Teoria dos Conjuntos</title>
-    <script src="js/arquivo2.js"></script> <!-- defer = carrega após o HTML -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .bloco {
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid #aaa;
-            border-radius: 8px;
-            display: inline-block;
-            vertical-align: top;
-        }
-        button {
-            margin: 3px;
-        }
-        #resultado {
-            margin-top: 20px;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Teoria dos Conjuntos</title>
 </head>
-
 <body>
-    <h2>Sistema Teoria dos Conjuntos</h2>
+  <h1>Teoria dos Conjuntos</h1>
 
-    <div class="bloco">
-        <h3>Conjunto A</h3>
-        <input type="number" id="valorA" placeholder="Valor">
-        <button onclick="incluirA()">Incluir</button>
-        <p id="exibirA">A = {}</p>
-    </div>
+  <h3>Conjunto A</h3>
+  Digite um Número: <input type="number" id="valorA" placeholder="Digite um Número">
+  <input type="button" value="Incluir" onclick="incluir('A')">
+  <h4 id="idConjuntoA">A = ∅</h4>
 
-    <div class="bloco">
-        <h3>Conjunto B</h3>
-        <input type="number" id="valorB" placeholder="Valor">
-        <button onclick="incluirB()">Incluir</button>
-        <p id="exibirB">B = {}</p>
-    </div>
+  <h3>Conjunto B</h3>
+  Digite um Número: <input type="number" id="valorB" placeholder="Digite um Número">
+  <input type="button" value="Incluir" onclick="incluir('B')">
+  <h4 id="idConjuntoB">B = ∅</h4>
 
-    <div>
-        <h3>Operações</h3>
-        <button onclick="mostrar('uniao')">A ∪ B</button>
-        <button onclick="mostrar('intersecao')">A ∩ B</button>
-        <button onclick="mostrar('diferencaAB')">A - B</button>
-        <button onclick="mostrar('diferencaBA')">B - A</button>
-        <button onclick="mostrar('ordenado')">Ordenar A∪B</button>
-        <p id="resultado"></p>
-    </div>
+  <p>
+    <input type="button" value="Executar Operações" onclick="acaoBotaoExecutar()">
+  </p>
+
+  <h2>RESULTADOS</h2>
+  <p id="idResultado"></p>
+
+  <script src="js/arquivo.js"></script>
 </body>
 </html>

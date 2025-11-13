@@ -38,6 +38,6 @@ function acaoBotaoExecutar() {
   if (identicos) {
     resultadoC.innerText = "Os conjuntos A e B SÃO idênticos";
   } else {
-    resultadoC.innerText = "Os conjuntos A e B NÃO SÃO idênticos";
+    resultadoC.innerText = "Os conjuntos A e B NÃO são idênticos";
   }
 }
