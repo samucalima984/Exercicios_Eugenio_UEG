@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <title>Operações com Matrizes - Tema Flamengo</title>
+  <link rel="stylesheet" href="css/arquivo.css">
+</head>
+<body>
+  <header class="cabecalho-fla">
+    <img class="escudo-fla" src="imagens/flamengo.jpg" alt="Escudo do Flamengo">
+    <div class="titulo-cabecalho">
+      <h1>Operações com Matrizes</h1>
+      <p class="subtitulo">Interface em tema Clube de Regatas do Flamengo</p>
+    </div>
+  </header>
+
+  <main class="conteudo">
+
+    <section class="area-matrizes">
+      <div class="matriz-card">
+        <h3>Matriz A</h3>
+        <label>Linhas: <input id="linhasA"></label>
+        <label>Colunas: <input id="colunasA"></label>
+        <button id="btnGerarA" class="btn-fla">Gerar Matriz A</button>
+        <pre id="matrizA"></pre>
+      </div>
+
+      <div class="matriz-card">
+        <h3>Matriz B</h3>
+        <label>Linhas: <input id="linhasB"></label>
+        <label>Colunas: <input id="colunasB"></label>
+        <button id="btnGerarB" class="btn-fla">Gerar Matriz B</button>
+        <pre id="matrizB"></pre>
+      </div>
+    </section>
+
+    <div class="botoes-container">
+      <button id="btnSoma" class="btn-fla">+</button>
+      <button id="btnSubtracao" class="btn-fla">−</button>
+      <button id="btnMultiplicacao" class="btn-fla">*</button>
+      <button id="btnTranspA" class="btn-fla">TA</button>
+      <button id="btnTranspB" class="btn-fla">TB</button>
+      <button id="btnPermutarA" class="btn-fla">PA</button>
+      <button id="btnPermutarB" class="btn-fla">PB</button>
+      <button id="btnPropriedadesA" class="btn-fla">VA</button>
+      <button id="btnPropriedadesB" class="btn-fla">VB</button>
+      <button id="btnIgualdade" class="btn-fla">I / D</button>
+    </div>
+
+    <h3>Resultado</h3>
+    <pre id="resultado" class="resultado-box">—</pre>
+  </main>
+
+  <footer class="rodape">
+    <small>Tema inspirado nas cores do Clube de Regatas do Flamengo</small>
+  </footer>
+
+  <script src="js/arquivo.js"></script>
+</body>
+</html>

@@ -5,8 +5,8 @@ class ConjuntoNumerico {
 
   incluir(valor) {
     let existe = false;
-    for (let i = 0; i < this.array.length; i++) {
-      if (this.array[i] === valor) {
+    for (let vetor = 0; vetor < this.array.length; vetor++) {
+      if (this.array[vetor] === valor) {
         existe = true;
       }
     }
@@ -23,8 +23,8 @@ class ConjuntoNumerico {
 
   obterConjunto() {
     let copia = [];
-    for (let i = 0; i < this.array.length; i++) {
-      copia[copia.length] = this.array[i];
+    for (let vetor = 0; vetor < this.array.length; vetor++) {
+      copia[copia.length] = this.array[vetor];
     }
     return copia;
   }
@@ -33,11 +33,11 @@ class ConjuntoNumerico {
     let resultado = new ConjuntoNumerico();
     let outro = conjunto.obterConjunto();
 
-    for (let i = 0; i < this.array.length; i++) {
-      resultado.incluir(this.array[i]);
+    for (let vetor = 0; vetor < this.array.length; vetor++) {
+      resultado.incluir(this.array[vetor]);
     }
-    for (let j = 0; j < outro.length; j++) {
-      resultado.incluir(outro[j]);
+    for (let vetorC = 0; vetorC < outro.length; vetorC++) {
+      resultado.incluir(outro[vetorC]);
     }
     return resultado;
   }
@@ -46,10 +46,10 @@ class ConjuntoNumerico {
     let resultado = new ConjuntoNumerico();
     let outro = conjunto.obterConjunto();
 
-    for (let i = 0; i < this.array.length; i++) {
-      for (let j = 0; j < outro.length; j++) {
-        if (this.array[i] === outro[j]) {
-          resultado.incluir(this.array[i]);
+    for (let vetor = 0; vetor < this.array.length; vetor++) {
+      for (let vetorC = 0; vetorC < outro.length; vetorC++) {
+        if (this.array[vetor] === outro[vetorC]) {
+          resultado.incluir(this.array[vetor]);
         }
       }
     }
@@ -60,15 +60,15 @@ class ConjuntoNumerico {
     let resultado = new ConjuntoNumerico();
     let outro = conjunto.obterConjunto();
 
-    for (let i = 0; i < this.array.length; i++) {
+    for (let vetor = 0; vetor < this.array.length; vetor++) {
       let encontrado = false;
-      for (let j = 0; j < outro.length; j++) {
-        if (this.array[i] === outro[j]) {
+      for (let vetorC = 0; vetorC < outro.length; vetorC++) {
+        if (this.array[vetor] === outro[vetorC]) {
           encontrado = true;
         }
       }
       if (!encontrado) {
-        resultado.incluir(this.array[i]);
+        resultado.incluir(this.array[vetor]);
       }
     }
     return resultado;
@@ -77,10 +77,10 @@ class ConjuntoNumerico {
   verificarSubconjunto(conjunto) {
     let outro = conjunto.obterConjunto();
 
-    for (let i = 0; i < this.array.length; i++) {
+    for (let vetor = 0; vetor < this.array.length; vetor++) {
       let encontrado = false;
-      for (let j = 0; j < outro.length; j++) {
-        if (this.array[i] === outro[j]) {
+      for (let vetorC = 0; vetorC < outro.length; vetorC++) {
+        if (this.array[vetor] === outro[vetorC]) {
           encontrado = true;
         }
       }
@@ -98,10 +98,10 @@ class ConjuntoNumerico {
       return false;
     }
 
-    for (let i = 0; i < this.array.length; i++) {
+    for (let vetor = 0; vetor < this.array.length; vetor++) {
       let encontrado = false;
-      for (let j = 0; j < outro.length; j++) {
-        if (this.array[i] === outro[j]) {
+      for (let vetorC = 0; vetorC < outro.length; vetorC++) {
+        if (this.array[vetor] === outro[vetorC]) {
           encontrado = true;
         }
       }
@@ -116,9 +116,9 @@ class ConjuntoNumerico {
   verificarDisjunto(conjunto) {
     let outro = conjunto.obterConjunto();
 
-    for (let i = 0; i < this.array.length; i++) {
-      for (let j = 0; j < outro.length; j++) {
-        if (this.array[i] === outro[j]) {
+    for (let vetor = 0; vetor < this.array.length; vetor++) {
+      for (let vetorC = 0; vetorC < outro.length; vetorC++) {
+        if (this.array[vetor] === outro[vetorC]) {
           return false;
         }
       }
@@ -132,9 +132,9 @@ class ConjuntoNumerico {
     let menor = this.array[0];
     let maior = this.array[0];
 
-    for (let i = 1; i < this.array.length; i++) {
-      if (this.array[i] < menor) menor = this.array[i];
-      if (this.array[i] > maior) maior = this.array[i];
+    for (let vetor = 1; vetor < this.array.length; vetor++) {
+      if (this.array[vetor] < menor) menor = this.array[vetor];
+      if (this.array[vetor] > maior) maior = this.array[vetor];
     }
 
     return maior - menor;
@@ -144,8 +144,8 @@ class ConjuntoNumerico {
     if (this.array.length === 0) return null;
 
     let soma = 0;
-    for (let i = 0; i < this.array.length; i++) {
-      soma += this.array[i];
+    for (let vetor = 0; vetor < this.array.length; vetor++) {
+      soma += this.array[vetor];
     }
 
     return (soma / this.array.length);
@@ -160,8 +160,8 @@ class ConjuntoNumerico {
 
     let soma = 0;
 
-    for (let i = 0; i < this.array.length; i++) {
-      soma += this.array[i] * outro[i];
+    for (let vetor = 0; vetor < this.array.length; vetor++) {
+      soma += this.array[vetor] * outro[vetor];
     }
 
     return soma;
@@ -171,19 +171,19 @@ class ConjuntoNumerico {
     let unido = this.gerarUniao(conjunto);
     let valores = unido.obterConjunto();
 
-    for (let i = 0; i < valores.length - 1; i++) {
-      for (let j = 0; j < valores.length - i - 1; j++) {
-        if (valores[j] > valores[j + 1]) {
-          let textoSaida = valores[j];
-          valores[j] = valores[j + 1];
-          valores[j + 1] = textoSaida;
+    for (let vetor = 0; vetor < valores.length - 1; vetor++) {
+      for (let vetorC = 0; vetorC < valores.length - vetor - 1; vetorC++) {
+        if (valores[vetorC] > valores[vetorC + 1]) {
+          let textoSaida = valores[vetorC];
+          valores[vetorC] = valores[vetorC + 1];
+          valores[vetorC + 1] = textoSaida;
         }
       }
     }
 
     let resultado = new ConjuntoNumerico();
-    for (let i = 0; i < valores.length; i++) {
-      resultado.incluir(valores[i]);
+    for (let vetor = 0; vetor < valores.length; vetor++) {
+      resultado.incluir(valores[vetor]);
     }
     return resultado;
   }
@@ -205,9 +205,9 @@ function mostrarConjunto(outroConjunto) {
     elemento.innerText = outroConjunto + " = ∅";
   } else {
     let texto = outroConjunto + " = {";
-    for (let i = 0; i < conjunto.length; i++) {
-      texto += conjunto[i];
-      if (i < conjunto.length - 1) {
+    for (let vetor = 0; vetor < conjunto.length; vetor++) {
+      texto += conjunto[vetor];
+      if (vetor < conjunto.length - 1) {
         texto += " | ";
       }
     }
@@ -265,9 +265,9 @@ function acaoBotaoExecutar() {
     if (conjuntoVariado.verificarVazio() === true) return "∅";
     let valores = conjuntoVariado.obterConjunto();
     let textoSaida = "{";
-    for (let i = 0; i < valores.length; i++) {
-      textoSaida += valores[i];
-      if (i < valores.length - 1) textoSaida += " | ";
+    for (let vetor = 0; vetor < valores.length; vetor++) {
+      textoSaida += valores[vetor];
+      if (vetor < valores.length - 1) textoSaida += " | ";
     }
     return textoSaida + "}";
   }
@@ -289,8 +289,8 @@ function acaoBotaoExecutar() {
   let saidaDisjunto = "Não";
   if (verificarDisjunto === true) saidaDisjunto = "Sim";
 
-  saida += "<b>A esta contido em B</b>: " + saidaSubconjuntoAB + "<br>";
-  saida += "<b>B esta contido em A</b>: " + saidaSubconjuntoBA + "<br>";
+  saida += "<b>A subconjunto de B</b>: " + saidaSubconjuntoAB + "<br>";
+  saida += "<b>B subconjunto de A</b>: " + saidaSubconjuntoBA + "<br>";
   saida += "<b>A e B sao idênticos</b>: " + saidaIdentico + "<br>";
   saida += "<b>A e B sao disjuntos</b>: " + saidaDisjunto + "<br><br>";
 
