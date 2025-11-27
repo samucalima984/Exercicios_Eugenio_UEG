@@ -3,7 +3,6 @@ class Matriz {
     this.qtdLinhas = qtdLinhas;
     this.qtdColunas = qtdColunas;
 
-    // matriz bidimensional inicializada com zeros
     this.valores = [];
     for (let indiceLinha = 0; indiceLinha < qtdLinhas; indiceLinha++) {
       this.valores[indiceLinha] = [];
